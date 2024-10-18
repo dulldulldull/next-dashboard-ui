@@ -3,6 +3,7 @@ import BigCalendar from "@/components/BigCalendar";
 import Image from "next/image";
 import Link from "next/link";
 import Performance from "@/components/Performance";
+import FormModal from "@/components/FormModal";
 const SingleTeacherPage = () => {
   return (
     <div className="flex-1 p-4 flex flex-col gap-4 xl:flex-row">
@@ -22,7 +23,27 @@ const SingleTeacherPage = () => {
               />
             </div>
             <div className="w-2/3 flex flex-col justify-between gap-4">
-              <h1 className="text-xl font-semibold">Random Name</h1>
+              <div className="flex items-center gap-4">
+                <h1 className="text-xl font-semibold">Random Name</h1>
+                <FormModal
+                  table="teacher"
+                  type="update"
+                  data={{
+                    id: "1",
+                    username: "Random Name",
+                    email: "random@gmail.com",
+                    password: "1234567890",
+                    firstName: "Random",
+                    lastName: "Name",
+                    phone: "+1 234 567 890",
+                    address: "Random Address",
+                    bloodType: "A+",
+                    dateOfBirth: "2025-01-01",
+                    gender: "male",
+                    img: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=1200",
+                  }}
+                />
+              </div>
               <p className="text-sm text-gray-500">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam, quos.
